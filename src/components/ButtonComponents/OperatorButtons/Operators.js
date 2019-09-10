@@ -9,7 +9,16 @@ const Operators = (props) => {
   return (
     <div className="btns-container">
       {
-       operatorState.map(operator => <OperatorButton key={operator.char} char={operator.char} value={operator.value} />)
+        operatorState.map(operator => {
+          return (
+            <OperatorButton 
+              key={operator.char} 
+              char={operator.char} 
+              value={operator.value} 
+              autoEvaluate={props.autoEvaluate}
+            />
+          )
+        })
       }
     </div>
   );

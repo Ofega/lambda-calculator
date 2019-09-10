@@ -68,7 +68,7 @@ div#root {
     transition: box-shadow .25s ease-in;
 }
 
-.btn:hover {
+.btn:hover, .btn:focus {
     box-shadow: none;
 }
 

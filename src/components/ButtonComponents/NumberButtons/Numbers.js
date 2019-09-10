@@ -9,7 +9,7 @@ const Numbers = (props) => {
   return (
     <div className="btns-container">
       {
-       numberState.map(number => <NumberButton number={number} key={number} updateResult={props.updateResult} />)
+       numberState.map(number => <NumberButton number={number} key={number} updateDisplay={props.updateDisplay} />)
       }
     </div>
   );

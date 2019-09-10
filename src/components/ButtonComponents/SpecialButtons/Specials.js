@@ -9,7 +9,15 @@ const Specials = (props) => {
   return (
     <div className="btns-container">
       {
-        specialState.map(specialChar => <SpecialButton key={specialChar} char={specialChar} />)
+        specialState.map(specialChar => {
+          return(
+            <SpecialButton 
+              key={specialChar} 
+              char={specialChar} 
+              reset={props.reset}
+            />
+          )
+        })
       }
     </div>
   );
