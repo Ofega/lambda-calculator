@@ -15,6 +15,8 @@ const Specials = (props) => {
               key={specialChar} 
               char={specialChar} 
               reset={props.reset}
+              percent={props.percent}
+              toggleSign={props.toggleSign}
             />
           )
         })

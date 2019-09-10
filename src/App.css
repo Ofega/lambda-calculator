@@ -71,7 +71,6 @@ div#root {
 .btn:hover, .btn:focus {
     box-shadow: none;
 }
-
 .btn.number {
     background: #113C78;
 }
@@ -80,6 +79,16 @@ div#root {
 }
 .btn.special {
     background: #2061B0;
+}
+
+.btn.number.zero {
+    width: calc(66.67% - 7px);
+    border-radius: 50px;
+}
+.btn.special.clear:focus {
+    -webkit-box-shadow: 1px 6px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 6px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 1px 6px 5px 0px rgba(0,0,0,0.75);
 }
 
 .btn-layout {

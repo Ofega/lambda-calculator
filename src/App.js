@@ -14,8 +14,7 @@ function App() {
   const [isPreviousKeyOperator, setPreviousKey] = useState(false);
   const [currentOperator, setCurrentOperator] = useState('');
 
-
-  // UPDATE DISPLAY FUNCTION
+  // UPDATE DISPLAY
   const updateDisplay = value => {
     if (isPreviousKeyOperator) {
       setCurrentResult(value); 
@@ -33,17 +32,9 @@ function App() {
     }
   }
 
-  // RESET CALCULATOR
-  const reset = () => {
-    setCurrentResult('0');
-    setpreviousResult(0);
-    setPreviousKey(false);
-    setCurrentOperator('');
-  }
-
   // EVALUATE EXPRESSION EVERYTIME AN OPERATOR IS CLICKED(ON SECOND CLICK UPWARDS)
   const autoEvaluate = operator => {
-    if(!currentOperator) { // IF THERE'S NO OPERATOR TRACKED
+    if(!currentOperator) {
       if(operator === '=') {
         setCurrentResult(currentResult);
       } else {
@@ -59,7 +50,7 @@ function App() {
     }
   };
 
-  // FUNCTION FOR CALCULATION BASED ON OPERATOR
+  // OPERATOR FUNCTION
   const calculate = (n1, operator, n2) => {
     let result = 0;
 
@@ -76,6 +67,22 @@ function App() {
     return Math.round(result * 100) / 100;
   }
 
+  // SPECIAL FUNCTIONS: RESET, PERCENT, TOGGLE SIGN
+  const reset = () => {
+    setCurrentResult('0');
+    setpreviousResult(0);
+    setPreviousKey(false);
+    setCurrentOperator('');
+  }
+
+  const percent = () => {
+    setCurrentResult(currentResult / 100);
+  }
+
+  const toggleSign = () => {
+    setCurrentResult(currentResult * -1);
+  }
+
 
   return (
     <div className="container">
@@ -84,7 +91,7 @@ function App() {
         <Display currentResult={currentResult} />
         <div className="btn-layout">
           <div className="btn-layout-1">
-            <Specials reset={reset} />
+            <Specials reset={reset} percent={percent} toggleSign={toggleSign} />
             <Numbers updateDisplay={updateDisplay} />
           </div>
           <div className="btn-layout-2">
