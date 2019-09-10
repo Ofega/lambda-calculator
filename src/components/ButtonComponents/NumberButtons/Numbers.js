@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import NumberButton from './NumberButton';
 import { numbers } from '../../../data';
 
-const Numbers = () => {
-  // STEP 2 - add the imported data to state
+const Numbers = (props) => {
+
+  const [numberState] = useState(numbers);
+
   return (
     <div className="btns-container">
       {
-       numbers.map(number => <NumberButton number={number} />)
+       numberState.map(number => <NumberButton number={number} key={number} updateResult={props.updateResult} />)
       }
     </div>
   );

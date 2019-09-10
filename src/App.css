@@ -49,8 +49,9 @@ div#root {
     box-shadow: 1px 1px #322c2d;
     display: flex;
     justify-content: flex-end;
-    align-items: flex-end;
-    font-size: 5.0rem;
+    align-items: center;
+    font-size: 3.5rem;
+    padding: .75rem 1rem 1rem;
 }
 
 /* BUTTON STYLING */
@@ -67,7 +68,7 @@ div#root {
     transition: box-shadow .25s ease-in;
 }
 
-.btn:hover, .btn:focus {
+.btn:hover {
     box-shadow: none;
 }
 

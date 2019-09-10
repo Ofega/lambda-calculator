@@ -1,9 +1,9 @@
 import React from "react";
 
-const NumberButton = ({ number }) => {
+const NumberButton = (props) => {
   return (
     <>
-       <button className="btn number">{number}</button>
+       <button className="btn number" onClick={() => props.updateResult(props.number)}>{props.number}</button>
     </>
   );
 };

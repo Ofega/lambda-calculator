@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import OperatorButton from './OperatorButton';
 import { operators } from '../../../data';
 
-const Operators = () => {
-  // STEP 2 - add the imported data to state
+const Operators = (props) => {
+
+  const [operatorState] = useState(operators);
+
   return (
     <div className="btns-container">
       {
-       operators.map(operator => <OperatorButton char={operator.char} />)
+       operatorState.map(operator => <OperatorButton key={operator.char} char={operator.char} value={operator.value} />)
       }
     </div>
   );
