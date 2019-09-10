@@ -3,7 +3,7 @@ import React from "react";
 const SpecialButton = ({ char }) => {
   return (
     <>
-      <button>{char}</button>
+      <button className="btn special">{char}</button>
     </>
   );
 };

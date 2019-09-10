@@ -5,7 +5,7 @@ import { numbers } from '../../../data';
 const Numbers = () => {
   // STEP 2 - add the imported data to state
   return (
-    <div>
+    <div className="btns-container">
       {
        numbers.map(number => <NumberButton number={number} />)
       }

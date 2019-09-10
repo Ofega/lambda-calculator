@@ -18,9 +18,15 @@ function App() {
       <Logo />
       <div className="App">
         <Display />
-        <Operators />
-        <Numbers />
-        <Specials />
+        <div class="btn-layout">
+          <div className="btn-layout-1">
+            <Specials />
+            <Numbers />
+          </div>
+          <div className="btn-layout-2">
+            <Operators />
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -6,7 +6,7 @@ const Specials = () => {
   // STEP 2 - add the imported data to state
 
   return (
-    <div>
+    <div className="btns-container">
       {
         specials.map(specialChar => <SpecialButton char={specialChar} />)
       }

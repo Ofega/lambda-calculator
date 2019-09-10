@@ -5,7 +5,7 @@ import { operators } from '../../../data';
 const Operators = () => {
   // STEP 2 - add the imported data to state
   return (
-    <div>
+    <div className="btns-container">
       {
        operators.map(operator => <OperatorButton char={operator.char} />)
       }
