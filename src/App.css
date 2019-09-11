@@ -1,22 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+}
+
+div#root {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* MAIN CONTAINER */
 .container {
     background-color: #c00025;
     width: 100%;
-    max-width: 550px;
+    max-width: 400px;
     border-radius: 15px;
     border: 2px solid grey;
-    padding-bottom: 25px;
+    padding: 25px;
+    margin: 0 auto;
 }
+
+/* LOGO STYLING */
+.logo-container {
+    height: 30px;
+}
+
+.logo-container .logo {
+    height: 100%;
+}
+
+/* DISPLAY STYLING */
 .display {
-    margin-top: 25px;
-    height: 100px;
-    width: 450px;
+    margin: 15px 0 25px;
+    height: 65px;
+    width: 100%;
     border-radius: 50px;
     color: white;
     background-color: #322c2d;
     box-shadow: 1px 1px #322c2d;
     display: flex;
     justify-content: flex-end;
-    align-items: flex-end;
-    padding-right: 8%;
-    font-size: 5.0rem;
-  }
+    align-items: center;
+    font-size: 3.5rem;
+    padding: .75rem 1rem 1rem;
+}
+
+/* BUTTON STYLING */
+.btn {
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    color: white;
+    margin-top: 15px;
+    font-size: 1.7rem;
+    -webkit-box-shadow: 1px 6px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 6px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 1px 6px 5px 0px rgba(0,0,0,0.75);
+    transition: box-shadow .25s ease-in;
+}
+
+.btn:hover, .btn:focus {
+    box-shadow: none;
+}
+.btn.number {
+    background: #113C78;
+}
+.btn.operator {
+    background: #3DB5E5;
+}
+.btn.special {
+    background: #2061B0;
+}
+
+.btn.number.zero {
+    width: calc(66.67% - 7px);
+    border-radius: 50px;
+}
+.btn.special.clear:focus {
+    -webkit-box-shadow: 1px 6px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 1px 6px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 1px 6px 5px 0px rgba(0,0,0,0.75);
+}
+
+.btn-layout {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btns-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.btns-container button {
+    width: calc(33.33% - 15px);
+    height: auto;
+    min-height: 70px
+}
+
+.btn-layout-1 {
+    width: calc(77% - 10px);
+}
+.btn-layout-2 {
+    width: calc(25% - 20px);
+}
+.btn-layout-2 .btns-container {
+    display: flex;
+    flex-direction: column;
+}
+.btn-layout-2 .btns-container button {
+    width: 100%;
+}
